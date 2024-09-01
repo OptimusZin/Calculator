@@ -1,0 +1,37 @@
+<h1>Basic Calculaor with Angular</h1>
+
+<form [formGroup]="calculatorForm" (ngSubmit)="calculate()">
+  <div class="calculator">
+    <input type="number" formControlName="num1" placeholder="Enter first number" required>
+
+    <select formControlName="operator1">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+
+    <input type="number" formControlName="num2" placeholder="Enter second number" required>
+
+    <select formControlName="operator2">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+
+    <input type="number" formControlName="num3" placeholder="Enter third number" required>
+
+    <button type="submit">=</button>
+
+    <input type="text" [value]="result !== null ? result : ''" readonly placeholder="Result">
+
+    <button type="button" (click)="reset()">Reset</button>
+  </div>
+
+
+</form>
+
+<div *ngIf="errorMessage" class="error">
+  {{ errorMessage }}
+</div>

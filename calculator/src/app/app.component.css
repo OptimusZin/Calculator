@@ -1,0 +1,32 @@
+.calculator {
+  display: flex;
+  align-items: center;
+}
+
+input, select, button {
+  margin: 5px;
+  padding: 8px;
+  font-size: 1em;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+input[readonly] {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+}
+
+.error {
+  margin-top: 15px;
+  color: red;
+  font-weight: bold;
+}
